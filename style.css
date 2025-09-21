@@ -22,11 +22,11 @@ body {
 
 /* Хедер */
 header {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 250px;
 }
 
 /* Контент */
@@ -36,7 +36,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px;
 }
 
 main h1, main h2 {
@@ -76,4 +75,71 @@ main span {
 .btn:hover {
     background: white;
     color: black;
+}
+
+.phones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-top: 2rem;
+}
+.phones p a{
+    color:whitesmoke;
+    text-decoration: none;
+
+}
+.phones p a img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(5300%) hue-rotate(334deg) brightness(92%) contrast(101%);
+}
+
+/* Смартфоны */
+@media (max-width: 768px) {
+    main h1, main h2 {
+        font-size: 2.3rem;
+    }
+    main p, main span {
+        font-size: 1.6rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 500px;
+    }
+    .btn {
+        padding: 15px 45px;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .phones {
+        gap: 0.5rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .logo {
+        max-width: 200px;
+    }
+    main h1, main h2 {
+        font-size: 2.5rem;
+    }
+    main p {
+        font-weight: 500;
+    }
+    main p, main span {
+        font-size: 1.5rem;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .btn {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+    .phones{
+        flex-direction: column;
+    }
 }
